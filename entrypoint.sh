@@ -53,7 +53,7 @@ export GITHUB_USER="${GITHUB_ACTOR}"
 
 echo -e "\nSetting branches..."
 SOURCE_BRANCH="${INPUT_SOURCE_BRANCH:-$(git symbolic-ref --short -q HEAD)}"
-TARGET_BRANCH="${INPUT_TARGET_BRANCH:-master}"
+TARGET_BRANCH="${INPUT_TARGET_BRANCH:-main}"
 echo "Source branch: ${SOURCE_BRANCH}"
 echo "Target branch: ${TARGET_BRANCH}"
 
