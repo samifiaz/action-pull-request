@@ -66,6 +66,9 @@ if [[ $(git rev-parse --revs-only "${SOURCE_BRANCH}") == $(git rev-parse --revs-
   exit 0
 fi
 
+echo -e "\nECHO.  Comparing branches by diff..."
+git diff "remotes/origin/${TARGET_BRANCH}...remotes/origin/${SOURCE_BRANCH}
+
 echo -e "\nComparing branches by diff..."
 if [[ -z $(git diff "remotes/origin/${TARGET_BRANCH}...remotes/origin/${SOURCE_BRANCH}") ]]; then
   if [[ "${INPUT_ALLOW_NO_DIFF}" == "true" ]]; then
