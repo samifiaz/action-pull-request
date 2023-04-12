@@ -58,7 +58,7 @@ echo "Source branch: ${SOURCE_BRANCH}"
 echo "Target branch: ${TARGET_BRANCH}"
 
 echo -e "\nUpdating all branches..."
-git fetch origin '+refs/heads/*:refs/heads/*' --update-head-ok
+git fetch origin '+refs/heads/*:refs/heads/*' --update-head-ok --depth=10000
 
 echo -e "\nComparing branches by revisions..."
 if [[ $(git rev-parse --revs-only "${SOURCE_BRANCH}") == $(git rev-parse --revs-only "${TARGET_BRANCH}") ]]; then
